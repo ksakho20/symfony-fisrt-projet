@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="container-fluid">
+  <a class="navbar-brand" href="#">Hotelcop</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{path('app_accueil')}}">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{path('app_chambre_et_gamme')}}">Chambre&Gamme</a>
+        {# <a href="{{ path('nom_de_la_route', { 'nom_param1': valeur_param1 }) }}" class="btn btn-primary btn-sm"> #}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{path('app_reservation')}}">Réservation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{path('app_contact')}}">Contactez-nous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{path('app_avis')}}">Avis</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
