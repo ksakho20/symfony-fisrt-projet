@@ -19,10 +19,13 @@ class ReservationController extends AbstractController
         $form=$this->createForm(ReservationType::class);
         $form=$form->handleRequest($request);
 
-        if($form->isSubmitted() ){
-            dd($form->getData());
-        }
+       
+        if ($form->isSubmitted() && $form->isValid()) {
 
+                $this->addFlash('success', 'Le formulaire a été soumis avec succès !');}
+        else{
+                $this->addFlash('error', 'Tous les champs doivent être remplis pour procéder.');
+            }
 
 
         return $this->render('reservation/index.html.twig', [

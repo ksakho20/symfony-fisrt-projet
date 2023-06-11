@@ -19,10 +19,13 @@ class AvisController extends AbstractController
         $form=$this->createForm(AvisType::class);
         $form=$form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
-            dd($form->getData());
-            
-        }
+       
+        if ($form->isSubmitted() && $form->isValid()) {
+
+                $this->addFlash('success', 'Le formulaire a été soumis avec succès !');}
+        else{
+                $this->addFlash('error', 'Tous les champs doivent être remplis pour procéder.');
+            }
         
 
 
