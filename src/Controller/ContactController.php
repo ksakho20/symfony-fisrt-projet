@@ -23,7 +23,7 @@ class ContactController extends AbstractController
             // if($form->isValid()){
 
                 $this->addFlash('success', 'Le formulaire a été soumis avec succès !');}
-            else{
+        else{
                 $this->addFlash('error', 'Tous les champs doivent être remplis pour procéder.');
             }
         
